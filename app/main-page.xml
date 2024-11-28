@@ -1,0 +1,22 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
+    <ActionBar title="LinkedIn Headshot Enhancer" />
+    
+    <StackLayout class="p-4">
+        <Button text="Select Photo" tap="{{ onSelectPhoto }}" 
+                class="bg-blue-500 text-white font-bold py-2 px-4 rounded-lg mb-4" 
+                isEnabled="{{ !isProcessing }}" />
+        
+        <ActivityIndicator busy="{{ isProcessing }}" 
+                         visibility="{{ isProcessing ? 'visible' : 'collapsed' }}"
+                         class="mb-4" />
+        
+        <Image src="{{ imagePath }}" 
+               visibility="{{ imagePath ? 'visible' : 'collapsed' }}"
+               class="w-full h-96 rounded-lg"
+               stretch="aspectFit" />
+        
+        <Label text="No photo selected" 
+               visibility="{{ !imagePath ? 'visible' : 'collapsed' }}"
+               class="text-gray-500 text-center" />
+    </StackLayout>
+</Page>

@@ -1,0 +1,15 @@
+export const ENHANCEMENT_SETTINGS = {
+  BRIGHTNESS: 1.1,
+  CONTRAST: 1.15,
+  SATURATION: 0.95,
+  SHARPNESS: 0.3,
+  SMOOTHING: 0.3,
+  WARMTH: 0.95,
+  TINT: 1.02
+};
+
+export const IMAGE_QUALITY = {
+  HIGH: 90,
+  MEDIUM: 75,
+  LOW: 60
+};
